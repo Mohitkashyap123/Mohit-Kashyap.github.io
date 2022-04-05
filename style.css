@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 248, 248);
+}
+/* nav{
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+#navbar{
+    background-color: #252934;
+}
+a{
+    color :white;
+    text-decoration: none;
+    padding: 8px;
+}
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline;
+    text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  font-size: 25px;
+} */
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+#home{
+ 
+height: 500px;
+ width: 100%;
+ position: relative;
+  text-align: center;
+  color: white;
+}
+.bgVideo{
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+@keyframes nameAnimation {
+    from {font-size: 50px;}
+    to {font-size: 70px;}
+  }
+#bio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color:black;
+    animation-name: nameAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 500px){
+    @keyframes nameAnimation {
+        from {font-size: 45px;}
+        to {font-size: 55px;}
+      }
+
+      #bio{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 50px;
+    }
+}
+#work-btn{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+#work-btn:hover{
+    background-color: rgb(125, 95, 160);
+}
+#profile{
+    background-color: rgb(207, 192, 192);
+    margin-top: 10px;
+    /* text-align: center; */
+}
+
+
+  #About{
+      background-color: blanchedalmond;
+  }
+ @keyframes name {
+    from {color: red;}
+    to {color: yellow;}
+  } 
+#name{
+    font-size: 30px;
+    display: block;
+    transition:font-size 2s;
+    animation-name: name;
+    animation-duration: 4s;
+    text-align: center;
+}
+#name:hover{
+    font-size: 40px;
+}
+
+#desc{
+    display: block;
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+    margin-left: auto;
+}
+.info{font-size: 28px;}
+
+@media only screen and (max-width: 500px) {
+      .info{font-size: 15px;}
+
+      input{
+        margin-top: 5px;
+      text-align: center;
+      width: 200px;
+      height: 25px;
+      border-radius: 10px;
+  }
+  
+  textarea{ 
+      width: 200px; 
+  }
+    }
+@keyframes skillAnim{
+    from {color: rgb(156, 50, 50);margin-left: 0px;}
+    to {color: rgb(0, 0, 0);margin-left: 50%;}
+}
+#Myskills{
+    margin-top: 10px;   
+}
+h1{
+    /* text-align: center; */
+    margin-left: 50%;
+    animation-name: skillAnim;
+    animation-duration: 4s;
+}
+.container {
+    align-items: center;
+    width: 70%;
+    margin:auto;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+  
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  @keyframes htmlAnimation {
+    from {width: 0%;}
+    to {width: 90%;}
+  }
+  @keyframes cssAnimation {
+    from {width: 0%;}
+    to {width: 80%;}
+  }
+  @keyframes jsAnimation {
+    from {width: 0%;}
+    to {width: 65%;}
+  }
+  @keyframes phpAnimation {
+    from {width: 0%;}
+    to {width: 75%;}
+  }
+  
+  .html {width: 90%; animation-name: htmlAnimation ;animation-duration: 4s;background-color: #04AA6D;}
+  .css {width: 80%; animation-name: cssAnimation ;animation-duration: 4s;background-color: #2196F3;}
+  .js {width: 65%; animation-name: jsAnimation ;animation-duration: 4s;background-color: #f44336;}
+  .php {width: 75%; animation-name: phpAnimation ;animation-duration: 4s;background-color: #808080;}
+
+
+  #contact{
+      text-align: center;
+      background-color: #252934;
+      margin: auto;
+  }
+  .title{
+    font-size: 35px;
+    color: white;
+    transition: font-size 1s;
+  }
+
+  .title:hover{
+    font-size: 40px;
+  }
+
+  input{
+      margin-top: 5px;
+    text-align: center;
+    width: 300px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+textarea{
+    margin-top: 5px;
+    text-align: center; 
+    border-radius: 10px; 
+    width: 450px; 
+    height: 100px;
+}
+
+.form{
+    border: white solid 2px;
+    border-radius: 8px;
+    background-color: #252934;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 3px;
+    height: 40px;
+    width: 150px;
+}
+
+.form:hover{
+    background-color: #243564;
+}
+
+footer{
+    margin: auto;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+footer a{
+    padding: auto;
+}
+
+.heading{
+    font-size: 5vh;
+    animation-name: titleAnim;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes titleAnim {
+    from {opacity: 0.1;}
+    to {opacity: 1;}
+  }
+
+  @media only screen and (max-width: 500px) {
+    input{
+      margin-top: 5px;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+textarea{ 
+    width: 250px; 
+}
+@keyframes skillAnim{
+    from {color: rgb(156, 50, 50);margin-left: 0px;}
+    to {color: rgb(0, 0, 0);margin-left: 40%;}
+}
+h1{
+    /* text-align: center; */
+    margin-left: 40%;
+    animation-name: skillAnim;
+    animation-duration: 4s;
+}
+  }
+
+#sns{
+ list-style: none;
+}
+#sns li{
+  text-decoration: none;
+  display: inline;
+  padding: 4px;
+}

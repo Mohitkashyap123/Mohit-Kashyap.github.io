@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>MyPortfolio</title>
+    <script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+</head>
+<body>
+    <!-- navigation bar -->
+    <!-- <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Myskills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav> -->
+    <nav class="navbar">
+        <div class="brand-title">Mohit Kashyap</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Myskills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+<div id="home">
+    <!-- background video -->
+    <!-- <iframe class="bgVideo" src="https://www.youtube.com/embed/Jk1CEXwwrt8?controls=0&autoplay=1&mute=1&playlist=Jk1CEXwwrt8&loop=1">
+    </iframe>  -->
+    <img src="bg2.jpg" alt="" class="bgVideo">
+    <p id="bio">Hello I am Mohit<br></p>
+    <button id="work-btn" onclick="window.location.href = 'https://covid-19-data-track.herokuapp.com/'">View My Work</button>
+   
+</div>
+
+<div id="About">
+    <h2 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="heading">About Me</h2>
+    <img  style=" margin-left: auto; margin-right: auto;display: block;border-radius: 75px;" src="Mohit.jfif" width="150px" height="150px">
+    <div class="personalInfo" style="text-align: center;"><p class="info"> Hi I am Mohit. I am a Mobile App Developer at InvenioLSI. 
+        <br>I Completed my graduation from IIIT Kota with specialization in computer science.
+        I can make Mobile Apps, Web apps.</p></div>
+      
+</div>
+
+</div>
+<!-- Graph -->
+<div id="Myskills">
+<h1>My Skills</h1>
+
+<div class="container">
+  <div class="skills html">HTML 90%</div>
+</div>
+
+
+<div class="container">
+  <div class="skills css"> CSS 80%</div>
+</div>
+
+<div class="container">
+  <div class="skills js">Javascript 65%</div>
+</div>
+
+<div class="container">
+  <div class="skills php">Ionic 60%</div>
+</div>
+</div>
+
+<!-- Contact form -->
+<div id="contact">
+    <p class="title">CONTACT ME</p>
+    <form method="post" action="#">
+        <input type="text" placeholder="Enter Your Name" id="user"><br>
+        <input type="email" placeholder="Enter Your Email" id="email"><br>
+        <textarea placeholder="Enter Your Message" id="msg"></textarea><br>
+        <button class="form" onclick="sendEmail()">Submit</button>
+    </form>
+</div>
+</div>
+
+<footer>
+    <ul id="sns">
+    <li><a href="https://www.instagram.com/its_mohitkashyap/"><img src="instagram.jfif" width="50px" height="50px"></a></li>
+    <li><a href="#"><img src="linkedin.png" width="50px" height="50px"></a></li>
+    <li><a href="https://github.com/Mohitkashyap123"><img src="git.png" width="50px" height="50px"></a></li>  
+    </ul>
+  </footer>
+<script type="text/javascript">
+    function sendEmail() {
+        let name=document.getElementById("user").value;
+        let email=document.getElementById("email").value;
+        let msg=document.getElementById("msg").value;
+        console.log(name);
+        //alert(name);
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "mohitkashyap656@gmail.com",
+          Password: "aymhlniovcchndcg",
+             To: '2017kucp1029@iiitkota.ac.in',
+             From: email,
+          Subject: "Message from "+name,
+          Body: msg,
+        })
+          .then(function (message) {
+            alert("mail sent successfully")
+          });
+     }
+
+     const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+  </script>
+
+</body>
+</html>
